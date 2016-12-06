@@ -1,23 +1,13 @@
 {
-  "name": "WebMatrixExpressSite",
-  "version": "0.2.0",
-  "author": "The WebMatrix Team <webmatrix@microsoft.com>",
-  "description": "A simple boilerplate for building node applications on Windows Azure (or wherever)",
-  "contributors": [
-    {
-      "name": "Justin Beckwith",
-      "email": "justbe@microsoft.com"
-    }
-  ],
+  "name": "btnque",
+  "version": "0.1.0",
+  "author": "kuwa72",
+  "description": "",
   "main": "./server.js",
-  "keywords": [
-    "azure",
-    "boilerplate",
-    "express"
-  ],
   "dependencies": {
     "jade": "*",
-    "express": "~3.1.0"
+    "azure-storage": "^1.4.0",
+    "express": "^4.14.0"
   },
   "noAnalyze": true,
   "license": "Apache",
