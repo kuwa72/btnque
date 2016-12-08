@@ -1,4 +1,4 @@
-
+const pug = require('pug');
 /*
  * GET home page.
  */

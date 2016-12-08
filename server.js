@@ -3,7 +3,7 @@
 * Module dependencies.
 */
 
-var express = require('express')
+const express = require('express')
   , routes = require('./routes/index')
   , user = require('./routes/user')
   , join = require('./routes/join')
@@ -11,20 +11,20 @@ var express = require('express')
   , path = require('path')
   , azure = require('azure-storage');
 
-var app = express();
+const app = express();
 
-var queueName = 'btnqueue';
+const queueName = 'btnqueue';
 
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, 'public')));
 
-var queueService = azure.createQueueService();
+const queueService = azure.createQueueService();
 queueService.createQueueIfNotExists(queueName, error => {
 });
 
-var joinObj = join(queueService, queueName);
+const joinObj = join(queueService, queueName);
 console.log(joinObj);
 
 app.get('/', routes.index);
